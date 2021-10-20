@@ -75,6 +75,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="512,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Environment.CurrentDirectory]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execurion started here&quot;]" />
     <Assign sap:VirtualizedContainerService.HintSize="512,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[Pdffilepath]</OutArgument>
@@ -112,6 +113,5 @@
       </ui:ForEach.Body>
     </ui:ForEach>
     <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_InvoiceData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="512,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="new.xls" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execution completed&quot;]" />
   </Sequence>
 </Activity>
